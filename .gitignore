@@ -1,0 +1,23 @@
+# Node-moduler (alla installerade paket)
+node_modules/
+
+# Bygg-output från Vite
+dist/
+
+# Loggar
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Systemfiler (Mac/Windows)
+.DS_Store
+Thumbs.db
+
+
+.env
+.env.local
+
+# IDE/editor-filer
+.vscode/
+.idea/
