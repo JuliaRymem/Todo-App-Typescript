@@ -95,10 +95,11 @@ function App() {
           <li key={t.id} className={t.done ? "done" : ""}>
             <label>
               <input
-                type="checkbox"
-                checked={t.done}
-                onChange={() => toggleDone(t.id)}
-              />
+  type="checkbox"
+  className="todo-checkbox"
+  checked={t.done}
+  onChange={() => toggleDone(t.id)}
+/>
               Klar
             </label>{" "}
 

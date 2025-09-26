@@ -1,73 +1,102 @@
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    margin: 0;
-    padding-top: 90px; 
-  }
-  
-  /* kortet */
-  .app-container {
-    background: rgb(221, 215, 215);
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* inmatningsfält och knapp */
-  .input-row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-  
-  input[type="text"], input[type="date"] {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #e6dbdb;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    background: #786a76;   /* grön knapp */
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #907d98;
-  }
-  
-  /* själva listan */
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px;
-    border-bottom: 1px solid #bc86b8;
-  }
-  
-  /* stryker över text när todo är klar */
-  li.done input[type="text"] {
-    text-decoration: line-through;
-    color: #bf0e0e;
-  }
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8e3d3, #dcd2c0);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 90px; 
+}
+
+/* kortet */
+.app-container {
+  background: #fdfbf7;
+  padding: 60px; 
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(80, 60, 40, 0.25);
+  width: 100%;
+  max-width: 700px; 
+  border: 1px solid #d2c2a8;
+  transition: transform 0.2s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 2.4rem; 
+  color: #5a5c35; 
+  letter-spacing: 1px;
+}
+
+/* inmatningsfält och knapp */
+.input-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+input[type="text"], input[type="date"] {
+  flex: 1;
+  padding: 14px; /* större input */
+  font-size: 1.1rem;
+  border: 1px solid #c4b49b;
+  border-radius: 10px;
+  outline: none;
+  background: #faf8f3;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+input[type="text"]:focus, input[type="date"]:focus {
+  border-color: #7a8b59;
+  box-shadow: 0 0 8px rgba(122, 139, 89, 0.4);
+}
+.todo-checkbox {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #7a8b59; /* mossgrön */
+}
+
+/* knappar */
+button {
+  padding: 14px 22px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7a8b59, #5c6b3c);
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, background 0.3s;
+}
+button:hover {
+  background: linear-gradient(135deg, #a68a4a, #8b6f3b);
+  transform: scale(1.07);
+}
+
+/* listan */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem; 
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid #d2c2a8;
+  transition: background 0.2s;
+}
+li:hover {
+  background: #f5f1e6; /* ljusare bakgrund vid hover */
+}
+
+/* stryker över text när todo är klar */
+li.done input[type="text"] {
+  text-decoration: line-through;
+  color: #7a5c4b; /* dov brun */
+  opacity: 0.7;
+}
